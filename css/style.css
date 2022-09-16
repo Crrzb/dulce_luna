@@ -7,7 +7,10 @@ body{
 nav {
     
     /* background-color: #F9DC5C; */
-    background-color: #F0E68C;
+    /* background-color: #F0E68C; */
+    background: url("../img//fondo-dorado.jpg") repeat;
+    background-position: center;
+    /* background-image: linear-gradient(#F9DC5C, #F0E68C); */
 }
 
 a {
