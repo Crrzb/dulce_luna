@@ -4,7 +4,9 @@ body{
 }
 
 nav {
-    background-color: #F9DC5C;
+    
+    /* background-color: #F9DC5C; */
+    background-color: #F0E68C;
 }
 
 a {
