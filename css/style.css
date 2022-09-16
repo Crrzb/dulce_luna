@@ -1,6 +1,7 @@
 body{
     padding-top: 56px;
-    background: url("../img/fondo.jpeg") repeat;
+    /* background: url("../img/fondo.jpeg") repeat; */
+    background-color: white;
 }
 
 nav {
