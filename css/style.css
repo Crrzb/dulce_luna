@@ -1,0 +1,15 @@
+body{
+    padding-top: 56px;
+    background: url("../img/fondo.jpeg") repeat;
+}
+
+nav {
+    background-color: #F9DC5C;
+}
+
+a {
+    color: black !important;
+}
+
+
+
