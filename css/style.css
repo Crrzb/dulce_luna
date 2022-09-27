@@ -13,8 +13,18 @@ nav {
     /* background-image: linear-gradient(#F9DC5C, #F0E68C); */
 }
 
+footer {
+    background: url("../img//fondo-dorado.jpg") repeat;
+    background-position: center;
+}
+
 a {
     color: black !important;
+}
+
+.btn-fondo-gold{
+    background: url("../img//fondo-dorado.jpg") repeat;
+    background-position: center;
 }
 
 
