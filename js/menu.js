@@ -17,6 +17,7 @@ function ordenar_pastel() {
     let relleno = document.getElementById("relleno_selector").value;
     let comentario = document.getElementById("nota").value;
     let fecha = document.getElementById("fecha").value;
+    let mensaje_error = document.getElementById("mensaje_error");
     
 
     let extras = "*Extras*: ";
@@ -42,5 +43,12 @@ function ordenar_pastel() {
 
     const nota = nota_inicio + nota_pedido + extras + comentario_pedido + fecha_entrega;
 
-    window.location.href = "https://wa.me/5218131559926?text=" + nota;
+    if(!confirm("Se abrira Whatsapp para enviar tu pedido!")){
+        mensaje_error.classList.toggle("visually-hidden");
+    }else{
+        window.location.href = "https://wa.me/5218131559926?text=" + nota;
+        mensaje_error.classList.toggle("visually-hidden");
+    }
+
+    
 }

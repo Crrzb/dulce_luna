@@ -38,5 +38,10 @@ a {
     font-size: 50px;
 }
 
+#p_error{
+   font-family: 'Courier New', Courier, monospace;
+   font-size: 15px;
+}
+
 
 
