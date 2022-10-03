@@ -1,5 +1,4 @@
 body{
-    padding-top: 56px;
     /* background: url("../img/fondo.jpeg") repeat; */
     background-color: #F8F9FA;
 }
@@ -33,15 +32,29 @@ a {
 }
 
 #dulce_luna_logo,#dulce_luna_h1,#dulce_luna_h3 {
-    font-family: rolling_out;
+    /* font-family: rolling_out; */
     color:black;
     font-size: 50px;
 }
 
 #p_error{
-   font-family: 'Courier New', Courier, monospace;
+   
    font-size: 15px;
 }
+
+#img_visor{
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    opacity: 95%;
+    position: fixed;
+}
+
+.large_img{
+    height: 75%;
+    height: 75%;
+}
+
 
 
 

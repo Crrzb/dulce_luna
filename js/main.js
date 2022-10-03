@@ -6,7 +6,7 @@ let icon_menu = document.getElementById("icon_menu");
 
 function click_menu(){
     dropdown_menu.classList.toggle("visually-hidden");
-
+    
     icon_menu.classList.toggle("fa-sharp");
     icon_menu.classList.toggle("fa-solid");
     icon_menu.classList.toggle("fa-2x");
@@ -15,6 +15,11 @@ function click_menu(){
     icon_menu.classList.toggle("fa-solid");
     icon_menu.classList.toggle("fa-xmark");
     icon_menu.classList.toggle("fa-2x");
+
+
+
+
+    
 }
 
 let opciones_menu = document.getElementsByClassName("opciones_menu");
@@ -31,4 +36,15 @@ function border_to_black(element){
 function border_to_light(element){
     element.classList.remove("border-dark");
     element.classList.add("border-light");
+}
+
+
+
+let imgs = document.getElementsByClassName('foto_pastel');
+for(const img of imgs){
+    img.addEventListener("click",()=>img_fullscreen(img),false);
+}
+
+function img_fullscreen(img){
+    img.style.height = '100%';
 }

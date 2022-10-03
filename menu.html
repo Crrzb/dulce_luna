@@ -111,7 +111,7 @@
                 <div class="col">
                     <h1 class="display-3 text-center">Pan</h1>
                     <ul class="list-group">
-                        <li class="list-group-item">Vainilla</li>
+                        <li class="list-group-item list-group-item-warning">Vainilla</li>
                         <li class="list-group-item">Chocolate</li>
                     </ul>
                     <p class="fw-lighter">Maximo 1.</p>
@@ -119,7 +119,7 @@
                 <div class="col">
                     <h1 class="display-3 text-center">Coberturas</h1>
                     <ul class="list-group">
-                        <li class="list-group-item">Betun de mantequilla</li>
+                        <li class="list-group-item list-group-item-warning">Betun de mantequilla</li>
                     </ul>
                 </div>
             </div>
@@ -128,11 +128,11 @@
             <div class="row">
                 <h1 class="display-3 text-center">Relleno</h1>
                 <ul class="list-group">
-                    <li class="list-group-item">Mermelada de fresa</li>
+                    <li class="list-group-item list-group-item-warning">Mermelada de fresa</li>
                     <li class="list-group-item">Mermelada de piña</li>
-                    <li class="list-group-item">Betun de mantequilla</li>
+                    <li class="list-group-item list-group-item-warning">Betun de mantequilla</li>
                     <li class="list-group-item">Crema de avellanas</li>
-                    <li class="list-group-item">Dulce de leche</li>
+                    <li class="list-group-item list-group-item-warning">Dulce de leche</li>
                 </ul>
                 <p class="fw-lighter">Maximo 1.</p>
             </div>
@@ -141,11 +141,11 @@
             <div class="row">
                 <h1 class="display-3 text-center">Extras</h1>
                 <ul class="list-group">
-                    <li class="list-group-item">Betun queso crema + fruta (Fresa o Mango)</li>
+                    <li class="list-group-item list-group-item-warning">Betun queso crema + fruta (Fresa o Mango)</li>
                     <li class="list-group-item">Caketopper</li>
-                    <li class="list-group-item">Impresion en oblea</li>
+                    <li class="list-group-item list-group-item-warning">Impresion en oblea</li>
                     <li class="list-group-item">Macarrones</li>
-                    <li class="list-group-item">Flores</li>
+                    <li class="list-group-item list-group-item-warning">Flores</li>
                     <li class="list-group-item">Chocolates</li>
                 </ul>
                 <p class="fw-lighter">*Precios a cotizar.</p>
@@ -153,7 +153,7 @@
         </div>
 
         <!-- CREAR PEDIDO -->
-        <div class="container-fluid bg-dark text-light pb-5" id="nuevo_pedido">
+        <div class="container-fluid bg-dark text-light pb-5 mt-5" id="nuevo_pedido">
             <div class="row">
                 <div class="col border-top border-1 border-dark mt-5">
                     <h1 class="mt-3">Crear nuevo pedido</h1>
@@ -179,7 +179,7 @@
             </div>
 
             <div class="row">
-                <div class="col">
+                <div class="col mt-3">
                     <label for="pan_selector">Selecciona el pan.</label>
                     <select class="form-select" id="pan_selector">
                         <option value="Vainilla" selected>Vainilla</option>
@@ -189,7 +189,7 @@
             </div>
 
             <div class="row">
-                <div class="col">
+                <div class="col mt-3">
                     <label for="cobertura_selector">Selecciona la cobertura.</label>
                     <select class="form-select" id="cobertura_selector">
                         <option value="Betun de mantequilla" selected>Betun de mantequilla</option>
@@ -198,7 +198,7 @@
             </div>
 
             <div class="row">
-                <div class="col">
+                <div class="col mt-3">
                     <label for="relleno_selector">Selecciona el relleno.</label>
                     <select class="form-select" id="relleno_selector">
                         <option value="Mermelada de fresa" selected>Mermelada de fresa</option>
@@ -211,49 +211,49 @@
             </div>
 
             <div class="row">
-                <div class="col">
+                <div class="col mt-3">
                     <label for="queso_mango">Agregar extras.</label>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Betun queso crema con Mango"
+                    <div class="form-check mt-1">
+                        <input class="form-check-input fs-3 mx-1" type="checkbox" value="Betun queso crema con Mango"
                             id="queso_mango">
-                        <label class="form-check-label" for="queso_mango">Betun queso crema + Mango</label>
+                        <label class="form-check-label fs-3" for="queso_mango">Betun queso crema + Mango</label>
                     </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Betun queso crema con Fresa"
+                    <div class="form-check mt-1">
+                        <input class="form-check-input fs-3 mx-1" type="checkbox" value="Betun queso crema con Fresa"
                             id="queso_fresa">
-                        <label class="form-check-label" for="queso_fresa">Betun queso crema + Fresa</label>
+                        <label class="form-check-label fs-2" for="queso_fresa">Betun queso crema + Fresa</label>
                     </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Caketopper" id="caketopper">
-                        <label class="form-check-label" for="caketopper">Caketopper</label>
+                    <div class="form-check mt-1">
+                        <input class="form-check-input fs-3 mx-1" type="checkbox" value="Caketopper" id="caketopper">
+                        <label class="form-check-label fs-2" for="caketopper">Caketopper</label>
                     </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Impresion en oblea" id="oblea">
-                        <label class="form-check-label" for="oblea">Impresion en oblea</label>
+                    <div class="form-check mt-1">
+                        <input class="form-check-input fs-3 mx-1" type="checkbox" value="Impresion en oblea" id="oblea">
+                        <label class="form-check-label fs-2" for="oblea">Impresion en oblea</label>
                     </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Macarrones" id="macarrones">
-                        <label class="form-check-label" for="macarrones">Macarrones</label>
+                    <div class="form-check mt-1">
+                        <input class="form-check-input fs-3 mx-1" type="checkbox" value="Macarrones" id="macarrones">
+                        <label class="form-check-label fs-2" for="macarrones">Macarrones</label>
                     </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Flores" id="flores">
-                        <label class="form-check-label" for="flores">Flores</label>
+                    <div class="form-check mt-1">
+                        <input class="form-check-input fs-3 mx-1" type="checkbox" value="Flores" id="flores">
+                        <label class="form-check-label fs-2" for="flores">Flores</label>
                     </div>
 
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Chocolates" id="chocolates">
-                        <label class="form-check-label" for="chocolates">Chocolates</label>
+                    <div class="form-check mt-1">
+                        <input class="form-check-input fs-3 mx-1" type="checkbox" value="Chocolates" id="chocolates">
+                        <label class="form-check-label fs-2" for="chocolates">Chocolates</label>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col">
+                <div class="col mt-3">
                     <div class="form-group">
                         <label for="nota">Nota:</label>
                         <textarea class="form-control" id="nota" rows="3"
@@ -263,8 +263,8 @@
             </div>
 
             <div class="row">
-                <div class="col">
-                    <label for="fecha">Fecha de entrega</label>
+                <div class="col mt-3">
+                    <label for="fecha">Fecha de entrega:</label>
                     <input id="fecha" class="form-control" type="date" value="2022-06-01"/>
                 </div>
             </div>

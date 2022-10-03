@@ -18,7 +18,23 @@
 
 <body>
 
-    <nav class="navbar fixed-top shadow-sm">
+    <div class="container-fluid bg-dark" id="img_visor">
+        <div class="row ">
+            <div class="col text-end pt-3">
+                <button class="btn text-light">
+                    <i class="fa-solid fa-2x fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col text-center">
+                <img src="img/pasteles/pastel3.jpeg" alt="" class="img-fluid img-thumbnail bg-light border-0 large_img">
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar">
         <div class="container-fluid">
             <a class="navbar-brand fs-1 fw-bolder text-dark fst-italic" id="dulce_luna_logo" href="index.html">Dulce Luna</a>
             <button class="btn d-md-none" onclick="click_menu();">
@@ -27,26 +43,28 @@
             </button>
         </div>
 
-        <div class="container-fluid visually-hidden" id="dropdown_menu">
+        <div class="container-fluid mt-3 visually-hidden" id="dropdown_menu">
             <div class="row">
-                <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom opciones_menu">
+                <div class="col-sm-12 col-md-3 mx-3 mb-3 pt-2 border-5 border-light border-bottom opciones_menu">
                     <a href="" class="text-decoration-none">INICIO</a>
                 </div>
-
+    
                 <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom opciones_menu">
                     <a href="menu.html" class="text-decoration-none">MENU</a>
                 </div>
-
+    
                 <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom opciones_menu">
                     <a href="fotos.html" class="text-decoration-none">FOTOS</a>
                 </div>
-
+    
                 <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom opciones_menu">
                     <a href="index.html#redes" onclick="click_menu();" class="text-decoration-none">CONTACTO</a>
                 </div>
             </div>
         </div>
     </nav>
+
+
 
     <main>
         <div class="container-fluid">
@@ -63,13 +81,13 @@
         <div class="container-fluid pt-3 bg-dark">
             <div class="row">
                 <div class="col m-1 p-0">
-                    <img src="img/pasteles/pastel1.jpeg" alt="pastel" class="img-fluid img-thumbnail">
+                    <img src="img/pasteles/pastel1.jpeg" alt="pastel" class="img-fluid img-thumbnail" style="height: 100%;">
                 </div>
                 <div class="col m-1 p-0">
-                    <img src="img/pasteles/pastel2.jpeg" alt="pastel" class="img-fluid img-thumbnail">
+                    <img src="img/pasteles/pastel2.jpeg" alt="pastel" class="img-fluid img-thumbnail" style="height: 100%;">
                 </div>
                 <div class="col m-1 p-0">
-                    <img src="img/pasteles/pastel3.jpeg" alt="pastel" class="img-fluid img-thumbnail">
+                    <img src="img/pasteles/pastel3.jpeg" alt="pastel" class="img-fluid img-thumbnail" style="height: 100%;">
                 </div>
             </div>
 
