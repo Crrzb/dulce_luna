@@ -20,7 +20,8 @@
 <body>
     <nav class="navbar fixed-top shadow-sm">
         <div class="container-fluid">
-            <a class="navbar-brand fs-2 fw-bolder text-dark fst-italic" href="index.html">Dulce Luna</a>
+            <a class="navbar-brand fs-2 fw-bolder text-dark fst-italic" id="dulce_luna_logo" href="index.html">Dulce
+                Luna</a>
             <button class="btn d-md-none" onclick="click_menu();">
 
                 <i id="icon_menu" class="fa-sharp fa-solid fa-2x fa-bars"></i>
@@ -30,19 +31,19 @@
 
         <div class="container-fluid visually-hidden" id="dropdown_menu">
             <div class="row">
-                <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom">
+                <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom opciones_menu">
                     <a href="index.html" class="text-decoration-none">INICIO</a>
                 </div>
 
-                <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom">
+                <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom opciones_menu">
                     <a href="menu.html" class="text-decoration-none">MENU</a>
                 </div>
 
-                <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom">
+                <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom opciones_menu">
                     <a href="fotos.html" class="text-decoration-none">FOTOS</a>
                 </div>
 
-                <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom">
+                <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom opciones_menu">
                     <a href="index.html#redes" class="text-decoration-none">CONTACTO</a>
                 </div>
             </div>
@@ -74,8 +75,8 @@
                         </thead>
                         <tbody>
                             <tr class="table-warning text-center">
-                                <td >1 - 4 Porciones</td>
-                                <td >$ 150.00</td>
+                                <td>1 - 4 Porciones</td>
+                                <td>$ 150.00</td>
                             </tr>
                             <tr class="text-center">
                                 <td>6 - 8 Porciones</td>
@@ -151,6 +152,131 @@
             </div>
         </div>
 
+        <!-- CREAR PEDIDO -->
+        <div class="container-fluid bg-dark text-light pb-5" id="nuevo_pedido">
+            <div class="row">
+                <div class="col border-top border-1 border-dark mt-5">
+                    <h1 class="mt-3">Crear nuevo pedido</h1>
+
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="pastel_selector">Selecciona el tamaño.</label>
+                    <select class="form-select" id="pastel_selector">
+                        <option value="1 - 4 Porciones" selected>1 - 4 Porciones</option>
+                        <option value="6 - 8 Porciones">6 - 8 Porciones</option>
+                        <option value="10 - 15 Porciones">10 - 15 Porciones</option>
+                        <option value="18 - 20 Porciones">18 - 20 Porciones</option>
+                        <option value="6 - 8 Porciones">6 - 8 Porciones</option>
+                        <option value="10 - 15 Porciones">10 - 15 Porciones</option>
+                        <option value="25 - 30 Porciones">25 - 30 Porciones</option>
+                        <option value="30 - 40 Porciones">30 - 40 Porciones</option>
+                        <option value="45 - 50 Porciones">45 - 50 Porciones</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="pan_selector">Selecciona el pan.</label>
+                    <select class="form-select" id="pan_selector">
+                        <option value="Vainilla" selected>Vainilla</option>
+                        <option value="Chocolate">Chocolate</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="cobertura_selector">Selecciona la cobertura.</label>
+                    <select class="form-select" id="cobertura_selector">
+                        <option value="Betun de mantequilla" selected>Betun de mantequilla</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="relleno_selector">Selecciona el relleno.</label>
+                    <select class="form-select" id="relleno_selector">
+                        <option value="Mermelada de fresa" selected>Mermelada de fresa</option>
+                        <option value="Mermelada de piña">Mermelada de piña</option>
+                        <option value="Betun de mantequilla">Betun de mantequilla</option>
+                        <option value="Crema de avellanas">Crema de avellanas</option>
+                        <option value="Dulce de leche">Dulce de leche</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="queso_mango">Agregar extras.</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Betun queso crema con Mango"
+                            id="queso_mango">
+                        <label class="form-check-label" for="queso_mango">Betun queso crema + Mango</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Betun queso crema con Fresa"
+                            id="queso_fresa">
+                        <label class="form-check-label" for="queso_fresa">Betun queso crema + Fresa</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Caketopper" id="caketopper">
+                        <label class="form-check-label" for="caketopper">Caketopper</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Impresion en oblea" id="oblea">
+                        <label class="form-check-label" for="oblea">Impresion en oblea</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Macarrones" id="macarrones">
+                        <label class="form-check-label" for="macarrones">Macarrones</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Flores" id="flores">
+                        <label class="form-check-label" for="flores">Flores</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Chocolates" id="chocolates">
+                        <label class="form-check-label" for="chocolates">Chocolates</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="nota">Nota:</label>
+                        <textarea class="form-control" id="nota" rows="3"
+                            placeholder="Explicanos los detalles..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <label for="fecha">Fecha de entrega</label>
+                    <input id="fecha" class="form-control" type="date" value="2022-06-01"/>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col text-center mt-3 border-dark border-top border-1">
+                    <button class="btn-lg  btn-light rounded-pill my-3" id="ordenar_btn">Ordenar <i
+                            class="fa-solid fa-check"></i></button>
+                </div>
+            </div>
+        </div>
+
 
 
 
@@ -183,7 +309,7 @@
                 </div>
             </div>
 
-            <div class="col-6 text-center">
+            <div class="col-6 text-center mb-4">
                 <div class="row">
                     <div class="col border-bottom border-3 border-dark mx-3">
                         <a href="fotos.html" class="text-decoration-none text-dark fw-bold">FOTOS</a>
@@ -194,6 +320,12 @@
                         <a href="index.html#redes" class="text-decoration-none text-dark fw-bold">CONTACTO</a>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col mt-3 text-center">
+                <h3 class="fs-1" id="dulce_luna_h1">Dulce Luna Reposteria</h3>
             </div>
         </div>
     </footer>
@@ -212,5 +344,6 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
+<script src="js/menu.js"></script>
 
 </html>

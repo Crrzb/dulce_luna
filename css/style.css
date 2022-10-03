@@ -27,5 +27,16 @@ a {
     background-position: center;
 }
 
+@font-face {
+    font-family: rolling_out;
+    src: url(RollingOut.ttf);
+}
+
+#dulce_luna_logo,#dulce_luna_h1,#dulce_luna_h3 {
+    font-family: rolling_out;
+    color:black;
+    font-size: 50px;
+}
+
 
 
