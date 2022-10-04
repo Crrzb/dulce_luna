@@ -40,11 +40,23 @@ function border_to_light(element){
 
 
 
-let imgs = document.getElementsByClassName('foto_pastel');
-for(const img of imgs){
-    img.addEventListener("click",()=>img_fullscreen(img),false);
+function img_fullscreen(img){
+    let visor = document.getElementById("img_visor");
+    let visor_img = document.getElementById("visor_img");
+    let src = img.src.replace("http://127.0.0.1:5500/","");
+    console.log(src);
+    visor_img.src = src;
+    visor.classList.remove("visually-hidden");
+    document.body.style.height = "height:100%";
+    document.body.style.overflow = "hidden";
+    
+
+    
 }
 
-function img_fullscreen(img){
-    img.style.height = '100%';
+function close_visor(){
+    let visor = document.getElementById("img_visor");
+    visor.classList.add("visually-hidden");
+    document.body.style.overflow = "scroll";
 }
+

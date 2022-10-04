@@ -18,10 +18,10 @@
 
 <body>
 
-    <div class="container-fluid bg-dark" id="img_visor">
+    <div class="container-fluid bg-dark visually-hidden" id="img_visor">
         <div class="row ">
             <div class="col text-end pt-3">
-                <button class="btn text-light">
+                <button class="btn text-light" onclick="close_visor()">
                     <i class="fa-solid fa-2x fa-xmark"></i>
                 </button>
             </div>
@@ -29,7 +29,7 @@
 
         <div class="row">
             <div class="col text-center">
-                <img src="img/pasteles/pastel3.jpeg" alt="" class="img-fluid img-thumbnail bg-light border-0 large_img">
+                <img id="visor_img" src="#" alt="" class="img-fluid img-thumbnail bg-light border-0">
             </div>
         </div>
     </div>
@@ -39,7 +39,6 @@
             <a class="navbar-brand fs-1 fw-bolder text-dark fst-italic" id="dulce_luna_logo" href="index.html">Dulce Luna</a>
             <button class="btn d-md-none" onclick="click_menu();">
                 <i id="icon_menu" class="fa-sharp fa-solid fa-2x fa-bars"></i>
-                
             </button>
         </div>
 
@@ -51,10 +50,6 @@
     
                 <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom opciones_menu">
                     <a href="menu.html" class="text-decoration-none">MENU</a>
-                </div>
-    
-                <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom opciones_menu">
-                    <a href="fotos.html" class="text-decoration-none">FOTOS</a>
                 </div>
     
                 <div class="col-sm-12 col-md-3 mx-3 mb-3 border-5 border-light border-bottom opciones_menu">
@@ -72,138 +67,46 @@
                 <div class="col text-center bg-light mt-3">
                     <img src="img/logo.png" alt="" class="img-fluid img-thumbnail bg-light border-0"
                         style="height: 150px; width:150px">
-                    <p class="display-5">CONOCE NUESTRO TRABAJO Y DEJANOS SER PARTE DE TU GRAN DIA</p>
+                    <p class="display-5">DEJANOS SER PARTE DE TU GRAN DIA</p>
                 </div>
             </div>
         </div>
 
         <!-- PASTEL 4 -->
-        <div class="container-fluid pt-3 bg-dark">
-            <div class="row">
+        <div class="container-fluid pt-2 bg-dark">
+            <div class="row mt-4">
                 <div class="col m-1 p-0">
-                    <img src="img/pasteles/pastel1.jpeg" alt="pastel" class="img-fluid img-thumbnail" style="height: 100%;">
+                    <img id="img_1" src="img/pasteles/pastel1.jpeg" alt="pastel" class="img-fluid img-thumbnail" onclick="img_fullscreen(this)">
                 </div>
                 <div class="col m-1 p-0">
-                    <img src="img/pasteles/pastel2.jpeg" alt="pastel" class="img-fluid img-thumbnail" style="height: 100%;">
+                    <img id="img_2" src="img/pasteles/pastel2.jpeg" alt="pastel" class="img-fluid img-thumbnail" onclick="img_fullscreen(this)">
                 </div>
                 <div class="col m-1 p-0">
-                    <img src="img/pasteles/pastel3.jpeg" alt="pastel" class="img-fluid img-thumbnail" style="height: 100%;">
+                    <img id="img_3" src="img/pasteles/pastel3.jpeg" alt="pastel" class="img-fluid img-thumbnail" onclick="img_fullscreen(this)">
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col text-center my-3">
-                    <button type="button" class="btn btn-light rounded-pill btn-lg" style="width:fit-content; height: 60px;">
+            <div class="row align-items-center py-4 ">
+                <div class="col-2 text-center">
+                    <button id="left" class="btn d-md-none text-light visually-hidden" onclick="left_img();">
+                        <i class="fa-solid fa-angle-left fa-2x"></i>
+                    </button>
+                </div>
+                <div class="col-8 text-center">
+                    <button type="button" class="btn btn-light rounded-pill" style="width:fit-content; height: 50px;">
                         
-                        <a href="menu.html#nuevo_pedido" class="text-decoration-none fs-2" >Ordena aqui</a>
-                        <i class="fa-solid fa-bag-shopping fa-2x"></i>
+                        <a href="menu.html#nuevo_pedido" class="text-decoration-none fs-5" >Ordenar</a>
+                        <i class="fa-solid fa-bag-shopping"></i>
+                    </button>
+                </div>
+
+                <div class="col-2 text-center">
+                    <button id="right" class="btn d-md-none text-light" onclick="right_img();">
+                        <i class="fa-solid fa-angle-right fa-2x"></i>
                     </button>
                 </div>
             </div>
-            <!-- <div class="row ">
-                <div class="col text-center text-light">
-                    <h2 class="fs-1 fw-bolder border-top border-light border-1 mt-3 pt-2 mb-0">Nombre</h2>
-                    <p class="fs-3 fw-light m-0">Descripcion de los ingredientes</p>
-                    <p class="fs-3 fw-lighter m-0">Porciones/Personas</p>
-                    <p class="fs-2">$ 1000.00</p>
-                </div>
-            </div> -->
         </div>
-
-        <!-- PASTEL 3
-        <div class="container-fluid pt-3 bg-light">
-            <div class="row">
-                <div class="col  mx-auto p-0">
-                    <img src="img/pasteles/pastel.jpg" alt="pastel" class="img-fluid img-thumbnail">
-                </div>
-
-                <div class="col mx-auto p-0">
-                    <img src="img/pasteles/pastel.jpg" alt="pastel" class="img-fluid img-thumbnail">
-                </div>
-
-                <div class="col p-0">
-                    <img src="img/pasteles/pastel.jpg" alt="pastel" class="img-fluid img-thumbnail">
-                </div>
-            </div>
-
-            <div class="row ">
-                <div class="col text-center text-dark">
-                    <h2 class="fs-1 fw-bolder border-top border-dark border-1 mt-3 pt-2 mb-0">Nombre</h2>
-                    <p class="fs-3 fw-light m-0">Descripcion de los ingredientes</p>
-                    <p class="fs-3 fw-lighter m-0">Porciones/Personas</p>
-                    <p class="fs-2">$ 1000.00</p>
-
-                </div>
-            </div>
-        </div> -->
-
-        <!-- PASTEL 2
-        <div class="container-fluid pt-3 bg-dark">
-            <div class="row">
-                <div class="col  m-1 p-0">
-                    <img src="img/pasteles/pastel.jpg" alt="pastel" class="img-fluid img-thumbnail">
-                </div>
-                <div class="col m-1 p-0">
-                    <img src="img/pasteles/pastel.jpg" alt="pastel" class="img-fluid img-thumbnail">
-                </div>
-                <div class="col m-1 p-0">
-                    <img src="img/pasteles/pastel.jpg" alt="pastel" class="img-fluid img-thumbnail">
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col text-center text-light">
-                    <h2 class="fs-1 fw-bolder border-top border-light border-1 mt-3 pt-2 mb-0">Nombre</h2>
-                    <p class="fs-3 fw-light m-0">Descripcion de los ingredientes</p>
-                    <p class="fs-3 fw-lighter m-0">Porciones/Personas</p>
-                    <p class="fs-2">$ 1000.00</p>
-                </div>
-            </div>
-        </div> -->
-
-
-
-        <!-- PASTEL 1
-        <div class="container-fluid pt-3 bg-light">
-            <div class="row">
-                <div class="col  mx-auto p-0">
-                    <img src="img/pasteles/pastel.jpg" alt="pastel" class="img-fluid img-thumbnail">
-                </div>
-
-                <div class="col mx-auto p-0">
-                    <img src="img/pasteles/pastel.jpg" alt="pastel" class="img-fluid img-thumbnail">
-                </div>
-
-                <div class="col p-0">
-                    <img src="img/pasteles/pastel.jpg" alt="pastel" class="img-fluid img-thumbnail">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col text-center text-dark">
-                    <h2 class="fs-1 fw-bolder border-top border-dark border-1 mt-3  pt-2 mb-0">Nombre</h2>
-                    <p class="fs-3 fw-light m-0">Descripcion de los ingredientes</p>
-                    <p class="fs-3 fw-lighter m-0">Porciones/Personas</p>
-                    <p class="fs-2">$ 1000.00</p>
-
-                </div>
-            </div>
-        </div> -->
-
-        <!-- BOTON PARA VER MAS FOTOS -->
-        <div class="container-fluid bg-dark border-1 border-top">
-            <div class="row align-items-center" style="height: 100px;">
-                <div class="col text-center">
-                    <a type="button" class="btn btn-light btn-lg btn-fondo-gold border-light rounded-pill text-light" href="fotos.html" role="button">Ver
-                        mas fotos <i class="fa-solid fa-images text-dark"></i></a>
-                        
-                </div>
-            </div>
-        </div>
-
-
-
-
-
 
         <!-- SECCION DE REDES SOCIALES LINKS E ICONOS -->
         <div class="container-fluid bg-light mt-3" id="redes">
@@ -251,26 +154,19 @@
 
     <footer class="bg-dark container-fluid py-4">
         <div class="row">
-            <div class="col-6 text-center">
-                <div class="row">
+            <div class="col text-center">
+                <div class="row my-3">
                     <div class="col border-bottom border-3 border-dark mx-3">
                         <a href="index.html" class="text-decoration-none text-dark fw-bold">INICIO</a>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row my-3">
                     <div class="col border-bottom border-3 border-dark mx-3">
                         <a href="menu.html" class="text-decoration-none text-dark fw-bold">MENU</a>
                     </div>
                 </div>
-            </div>
 
-            <div class="col-6 text-center mb-4">
-                <div class="row">
-                    <div class="col border-bottom border-3 border-dark mx-3">
-                        <a href="fotos.html" class="text-decoration-none text-dark fw-bold">FOTOS</a>
-                    </div>
-                </div>
-                <div class="row">
+                <div class="row my-3">
                     <div class="col border-bottom border-3 border-dark mx-3">
                         <a href="index.html#redes" class="text-decoration-none text-dark fw-bold">CONTACTO</a>
                     </div>
@@ -298,5 +194,6 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 <script src="js/main.js"></script>
+<script src="js/app-fotos.js"></script>
 
 </html>

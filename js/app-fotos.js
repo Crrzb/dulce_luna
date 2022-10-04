@@ -1,55 +1,73 @@
-let contenedor_fotos = document.getElementById("contenedor-fotos");
-agregar_fotos("pastel");
+var index_1=1,index_2=2,index_3=3;
+let left_btn = document.getElementById("left");
+let right_btn = document.getElementById("right");
 
-
-
-function cargar_fotos(){
+function right_img(){
     
+    if(index_3!=29){
+        index_1++;
+        index_2++;
+        index_3++;
+
+        left_btn.classList.remove("visually-hidden");
+        if(index_3==29){
+            right_btn.classList.add("visually-hidden");
+        }
+        
+    }else{
+        right_btn.classList.add("visually-hidden");
+    }
+
+    let img_1 = document.getElementById("img_1");
+    img_1.src = "img/pasteles/pastel"+index_1+".jpeg";
+
+    let img_2 = document.getElementById("img_2");
+    img_2.src = "img/pasteles/pastel"+index_2+".jpeg";
+
+    let img_3 = document.getElementById("img_3");
+    img_3.src = "img/pasteles/pastel"+index_3+".jpeg";
+
+    console.group("Click right");
+    console.log(index_1);
+    console.log(index_2);
+    console.log(index_3);
+    console.groupEnd();
+
+
+
+    
+
 }
 
 
+function left_img(){
 
+    if(index_1!=1){
+        index_1--;
+        index_2--;
+        index_3--;
 
+        right_btn.classList.remove("visually-hidden");
+        if(index_1==1){
+            left_btn.classList.add("visually-hidden");
+        }
+    }else{
+        left_btn.classList.add("visually-hidden");
+    }
 
+    let img_1 = document.getElementById("img_1");
+    img_1.src = "img/pasteles/pastel"+index_1+".jpeg";
 
+    let img_2 = document.getElementById("img_2");
+    img_2.src = "img/pasteles/pastel"+index_2+".jpeg";
 
+    let img_3 = document.getElementById("img_3");
+    img_3.src = "img/pasteles/pastel"+index_3+".jpeg";
 
-
-
-
-
-
-function agregar_fotos(nombre_pastel){
-
-    let nombre = nombre_pastel;
-
-    let column = document.createElement("div");
-    column.classList.add("col-4","my-2");
-
-    let card = document.createElement("div");
-    card.classList.add("card");
-    card.style.width = "8rem";
-
-    let img = document.createElement("img");
-    img.classList.add("card-img-top");
-    img.src = "img/pasteles/"+nombre+".jpg";
-    img.alt = "pastel";
-
-    let card_body = document.createElement("div");
-    card_body.classList.add("card-body");
-
-    let card_title = document.createElement("h5");
-    card_title.classList.add("card-title");
-    card_title.textContent = "Pastel";
-
-    card_body.append(card_title);
-    card.append(img);
-    card.append(card_body);
-
-    column.append(card);
-    contenedor_fotos.append(column);
-
-
-
+    console.group("Click left");
+    console.log(index_1);
+    console.log(index_2);
+    console.log(index_3);
+    console.groupEnd();
 
 }
