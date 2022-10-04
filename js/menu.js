@@ -46,7 +46,7 @@ function ordenar_pastel() {
     if(!confirm("Se abrira Whatsapp para enviar tu pedido!")){
         mensaje_error.classList.toggle("visually-hidden");
     }else{
-        window.location.href = "https://wa.me/5218131559926?text=" + nota;
+        window.location.href = "https://wa.me/528110313978?text=" + nota;
         mensaje_error.classList.toggle("visually-hidden");
     }
 
